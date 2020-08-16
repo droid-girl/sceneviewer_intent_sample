@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Scene Viewer Demo</string>
+    <string name="resizable">Resizable</string>
+    <string name="scene_viewer_settings">Scene Viewer Settings</string>
+    <string name="duck">Duck</string>
+    <string name="robot">Robot (animated)</string>
+    <string name="choose_3d_model">3D model:</string>
+    <string name="choose_mode">Mode:</string>
+    <string name="show_with_scene_viewer">Show with Scene Viewer</string>
+    <string name="display_title">Display title</string>
+    <string name="display_link">Display link</string>
+    <string name="none">none</string>
+    <string name="ar_only">ar_only</string>
+    <string name="ar_preferred">ar_preferred</string>
+</resources>

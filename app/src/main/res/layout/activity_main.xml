@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/scene_viewer_settings"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textAppearance="?attr/textAppearanceHeadline6" />
+
+    <RadioGroup
+        android:id="@+id/model_rg"
+        android:checkedButton="@+id/model_duck_rbt"
+        app:layout_constraintTop_toBottomOf="@id/text_header"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/choose_3d_model"
+            android:layout_marginBottom="8dp"
+            android:textAppearance="?attr/textAppearanceBody1" />
+        <RadioButton
+            android:id="@+id/model_duck_rbt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/duck"/>
+        <RadioButton
+            android:id="@+id/model_robot"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/robot"/>
+    </RadioGroup>
+
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/title_switch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:layout_marginTop="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/model_rg"
+        android:text="@string/display_title"/>
+
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/link_switch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:layout_marginTop="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title_switch"
+        android:text="@string/display_link"/>
+
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/resizable_switch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:layout_marginTop="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/link_switch"
+        android:text="@string/resizable"/>
+
+    <RadioGroup
+        android:id="@+id/mode_rg"
+        android:checkedButton="@+id/mode_none_rbt"
+        app:layout_constraintTop_toBottomOf="@id/resizable_switch"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/choose_mode"
+            android:layout_marginBottom="8dp"
+            android:textAppearance="?attr/textAppearanceBody1" />
+        <RadioButton
+            android:id="@+id/mode_none_rbt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/none"/>
+        <RadioButton
+            android:id="@+id/ar_only_rbt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/ar_only"/>
+        <RadioButton
+            android:id="@+id/ar_preferred"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/ar_preferred"/>
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/simple_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/show_with_scene_viewer"
+        android:layout_marginTop="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mode_rg"
+        style="?attr/materialButtonOutlinedStyle" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
